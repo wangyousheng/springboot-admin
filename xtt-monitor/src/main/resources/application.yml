@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  security:
+    user:
+      name: "admin"
+      password: "admin"
+  boot:
+    admin:
+      notify:
+        mail:
+          to: 1373917414@qq.com
+          from: yswang_vip@sina.com
+  mail:
+    host: smtp.sina.com
+    username: yswang_vip@sina.com
+    password: yourpwd
+eureka:
+  instance:
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
